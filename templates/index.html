@@ -1,42 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Theme Layout</title>
-    <!-- Include Tailwind CSS via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anubhav Choubey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <style>
-        /* Custom styles for dark theme */
-        /* Set dark mode on body */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #1a202c;
-                color: #e2e8f0;
+        .nav-link {
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: red;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .header-text {
+            animation: slideInFromLeft 1s ease-out forwards;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
             }
         }
     </style>
 </head>
 
-<body class="font-sans antialiased">
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-center mb-4">Dark Theme Layout</h1>
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full md:w-1/2 px-4 mb-4">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-2">Section 1</h2>
-                    <p class="text-gray-300">This is a section in the dark-themed layout.</p>
-                </div>
+<body>
+    <div class="container">
+        <header
+            class="sticky-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <h1 class="header-text">Data Is 💖</h1>
             </div>
-            <div class="w-full md:w-1/2 px-4 mb-4">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-2">Section 2</h2>
-                    <p class="text-gray-300">Another section in the dark-themed layout.</p>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-secondary" onclick="scrollToSection('intro')">Introduction</a></li>
+                <li><a href="#" class="nav-link px-2" onclick="scrollToSection('about')">About</a></li>
+                <li><a href="#" class="nav-link px-2" onclick="scrollToSection('skills')">Skills</a></li>
+                <li><a href="#" class="nav-link px-2" onclick="scrollToSection('projects')">Projects</a></li>
+                <li><a href="#" class="nav-link px-2" onclick="scrollToSection('contact')">Contact Me</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end">
+            </div>
+        </header>
+    </div>
+
+    <div id="intro"
+        style="height: 800px; background-image: url({{url_for('static', filename='images/intro.jpg')}}); background-size: cover; background-position: center; display: flex; align-items: center;">
+        <div class="container" style="margin-left: 10%;">
+            <h1 class="display-1 fw-normal text-center font-weight-bold header-text">Anubhav Choubey</h1>
+            <h2 class="display-5 text-center font-weight-bold header-text">"Revolutionize The Contract Drafting Process
+                with our
+                Advanced AI Powered Solution"</h2>
+        </div>
+    </div>
+
+
+    <style>
+        .feature-image {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+    <div id="about" class="py-5">
+        <div class="container">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Our Vision
+                    </h1>
+                    <p class="lead">Our vision is to help out people with our AI based solution we are trying to
+                        reform
+                        the contract creation whole technique so people can have access of Contracts as well as Law
+                        advice whenever they need without much searching.</p>
+                </div>
+                <div class="col-lg-6">
+                    <video controls width="100%" height="auto" style="max-width: 700px; max-height: 500px;"
+                        loading="lazy">
+                        <source src="path_to_your_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+    <div id="skills" class="py-5">
+        <div class="container">
+            <header class="text-center mb-5">
+                <h1 class="display-4 fw-normal text-body-emphasis">skills</h1>
+                <p class="fs-5 text-body-secondary">Why You Should Choose Us?</p>
+            </header>
+            <div class="row">
+                <!-- skills Section -->
+                <div class="col-md-6">
+                    <!-- First Feature -->
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <!-- <img src="{{url_for('static', filename='images/box-1-img.png')}}"
+                                class="img-fluid rounded feature-image" alt="AI Contract Creation"> -->
+                            <img src="{{url_for('static', filename='images/ai_contract.gif')}}"
+                                class="img-fluid rounded feature-image" alt="AI Contract Creation">
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="fw-bold">AI Contract Creation</h3>
+                            <p>Leverage AI For Precision in Contract Generation</p>
+                        </div>
+                    </div>
+                    <!-- Second Feature -->
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <img src="{{url_for('static', filename='images/verify.gif')}}"
+                                class="img-fluid rounded feature-image" alt="AI Based Risk Analysis">
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="fw-bold">AI Based Risk Analysis</h3>
+                            <p>AI Powered Risk Analysis For Smarter Safer Contracts</p>
+                        </div>
+                    </div>
+                    <!-- Third Feature -->
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <img src="{{url_for('static', filename='images/finger_print.gif')}}"
+                                class="img-fluid rounded feature-image" alt="Adhar Based E-Sign">
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="fw-bold">Adhar Based E-Sign</h3>
+                            <p>Seal The Deal With Security Of E-Signatures</p>
+                        </div>
+                    </div>
+                    <!-- Fourth Feature -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{{url_for('static', filename='images/multi_language.gif')}}"
+                                class="img-fluid rounded feature-image" alt="Multi Language Support">
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="fw-bold">Multi Language Support</h3>
+                            <p>Make Contract in Any Language With 15+ Regional Language Support</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Big Image Section -->
+                <div class="col-md-6 mb-4">
+                    <img src="{{url_for('static', filename='images/sec-1-box1.png')}}"
+                        class="img-fluid rounded feature-image" alt="Big Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="projects" class="py-3">
+        <div class="container py-3">
+            <header>
+                <div class="projects-header p-3 pb-md-4 mx-auto text-center">
+                    <h1 class="display-4 fw-normal text-body-emphasis">projects</h1>
+                    <p class="fs-5 text-body-secondary">A Price To Suit Everyone</p>
+                </div>
+            </header>
+        </div>
+    </div>
+
+
+    <div id="contact" class="py-5">
+        <div class="container">
+            <div class="row g-2 justify-content-center">
+                <div class="col-md-6">
+                    <div class="card p-4 bg-transparent border-0">
+                        <header>
+                            <div class="projects-header p-3 pb-md-4 mx-auto text-center">
+                                <h1 class="display-4 fw-normal text-body-emphasis">Contact Us</h1>
+                            </div>
+                        </header>
+                        <form>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingName" placeholder="Name">
+                                <label for="floatingName">Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingEmail"
+                                    placeholder="name@example.com">
+                                <label for="floatingEmail">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="floatingCategory">
+                                    <option selected>Choose One that Suits Best:</option>
+                                    <option value="1">Suggestions</option>
+                                    <option value="2">Reporting Problems</option>
+                                    <option value="3">For Enterprises</option>
+                                </select>
+                                <label for="floatingCategory">Category</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Message" id="floatingMessage"
+                                    style="height: 100px;"></textarea>
+                                <label for="floatingMessage">Message</label>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mb-3 mb-md-0 text-body-secondary">Made by Anubhav Choubey</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                setActiveNavLink(sectionId);
+            }
+        }
+
+        function setActiveNavLink(sectionId) {
+            var navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(function (link) {
+                if (link.getAttribute('onclick').includes(sectionId)) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+    </script>
 </body>
 
 </html>
