@@ -28,11 +28,15 @@
             transition: color 0.3s ease-in-out;
             color: #ffffff;
         }
-
-        .nav-link:hover {
-            color: #ff6b6b;
+        
+        .nav-link:visited{
+            color: rgb(255, 255, 255);
         }
-
+        
+                .nav-link:hover {
+                    color: #ff6b6b;
+                }
+        
         .card {
             transition: transform 0.3s ease-in-out;
             background-color: #000000;
@@ -139,15 +143,16 @@
     <div id="intro"
         style="height: 800px; position: relative; display: flex; justify-content: center; align-items: center;">
         <div class="background-image"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url({{url_for('static', filename='images/intro.jpg')}}); background-size: cover; background-position: center; filter: blur(5px);">
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url({{url_for('static', filename='images/intro.jpg')}}); background-size: cover; background-position: center; filter: blur(3px);">
         </div>
         <div class="container" style="position: relative; z-index: 1; text-align: center;">
             <h1 class="display-1 fw-normal text-center font-weight-bold header-text">Anubhav Choubey</h1>
-            <h2 class="display-5 text-center font-weight-bold header-text">"Python | Data Science | Machine Learning |
-                Artificial Intelligence"</h2>
+            <h2 class="display-5 text-center font-weight-bold header-text">Python | Data Science | Machine Learning |<br>
+                Artificial Intelligence | Flask</h2>
         </div>
     </div>
 
+    <hr>
 
     <div id="about" class="py-5">
         <div class="container">
@@ -157,6 +162,8 @@
         </div>
     </div>
 
+    <hr>
+
     <div id="skills" class="py-5">
         <div class="container">
             <header class="text-center mb-5">
@@ -164,6 +171,8 @@
             </header>
         </div>
     </div>
+
+    <hr>
 
     <div id="projects" class="py-3">
         <div class="container py-3">
@@ -174,6 +183,8 @@
             </header>
         </div>
     </div>
+
+    <hr>
 
     <div id="contact" class="py-5">
         <div class="container">
@@ -188,7 +199,7 @@
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-3 mb-md-0 text-body-secondary">Made by Anubhav Choubey</span>
+                <span class="mb-3 mb-md-0 text-body-primary">Made by Anubhav Choubey</span>
             </div>
         </footer>
     </div>
@@ -212,6 +223,12 @@
                 }
             });
         }
+        window.addEventListener('load', function() {
+            var introElement = document.getElementById('intro');
+            if (introElement) {
+                introElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     </script>
 </body>
 
