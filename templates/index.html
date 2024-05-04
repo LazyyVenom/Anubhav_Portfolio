@@ -11,16 +11,28 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
         .nav-link {
             transition: color 0.3s ease-in-out;
+            color: #ffffff;
         }
 
         .nav-link:hover {
-            color: red;
+            color: #ff6b6b;
         }
 
         .card {
             transition: transform 0.3s ease-in-out;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            border: none;
         }
 
         .card:hover {
@@ -29,6 +41,7 @@
 
         .header-text {
             animation: slideInFromLeft 1s ease-out forwards;
+            color: #ffffff;
         }
 
         @keyframes slideInFromLeft {
@@ -45,6 +58,7 @@
 
         h2 {
             animation: fadeIn 1s ease-out forwards;
+            color: #ffffff;
         }
 
         @keyframes fadeIn {
@@ -55,6 +69,40 @@
             100% {
                 opacity: 1;
             }
+        }
+
+        .feature-image {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-image:hover {
+            transform: scale(1.1);
+        }
+
+        .py-5 {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        .text-body-emphasis {
+            color: #ff6b6b;
+        }
+
+        .border-top {
+            border-color: #ffffff;
+        }
+
+        .link-secondary {
+            color: #ffffff;
+        }
+
+        .container {
+            padding: 0 20px;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -88,17 +136,6 @@
         </div>
     </div>
 
-
-    <style>
-        .feature-image {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .feature-image:hover {
-            transform: scale(1.1);
-        }
-    </style>
-
     <div id="about" class="py-5">
         <div class="container">
             <header class="text-center mb-5">
@@ -107,8 +144,6 @@
         </div>
     </div>
 
-
-
     <div id="skills" class="py-5">
         <div class="container">
             <header class="text-center mb-5">
@@ -116,8 +151,6 @@
             </header>
         </div>
     </div>
-    </div>
-
 
     <div id="projects" class="py-3">
         <div class="container py-3">
@@ -128,8 +161,7 @@
             </header>
         </div>
     </div>
-    
-    
+
     <div id="contact" class="py-5">
         <div class="container">
             <header>
@@ -138,8 +170,8 @@
                 </div>
             </header>            
         </div>
-
     </div>
+
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
@@ -167,7 +199,6 @@
                 }
             });
         }
-
     </script>
 </body>
 
