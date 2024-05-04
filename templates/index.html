@@ -71,6 +71,7 @@
         }
 
         h1 {
+            animation: fadeIn 1s ease-out forwards;
             color: #ffffff;
         }
 
@@ -82,14 +83,6 @@
             100% {
                 opacity: 1;
             }
-        }
-
-        .feature-image {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .feature-image:hover {
-            transform: scale(1.1);
         }
 
         .py-5 {
@@ -117,6 +110,16 @@
             background-color: #000000;
             color: #ffffff;
         }
+
+        .good-text{
+            font-size: 1.3rem;
+        }
+
+        .stronger{
+            font-weight: 400;
+            color: #ff8c8c;
+        }
+
     </style>
 </head>
 
@@ -146,7 +149,7 @@
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url({{url_for('static', filename='images/intro.jpg')}}); background-size: cover; background-position: center; filter: blur(3px);">
         </div>
         <div class="container" style="position: relative; z-index: 1; text-align: center;">
-            <h1 class="display-1 fw-normal text-center font-weight-bold header-text">Anubhav Choubey</h1>
+            <h1 class="display-1 fw-normal text-center font-weight-bold header-text">ANUBHAV CHOUBEY</h1>
             <h2 class="display-5 text-center font-weight-bold header-text">Python | Data Science | Machine Learning
                 |<br>
                 Artificial Intelligence | Flask</h2>
@@ -158,8 +161,28 @@
     <div id="about" class="py-5">
         <div class="container">
             <header class="text-center mb-5">
-                <h1 class="display-2 fw-normal text-center font-weight-bold header-text">About</h1>
+                <h1 class="display-2 fw-normal text-center font-weight-bold header-text">About Me</h1>
             </header>
+            <hr>
+            <div class="row">
+                <h1 class="display-5 stronger bold">Education</h1>
+                <p class="good-text">Kendriya Vidyalaya Class 12th (2022) -  <span class="badge rounded-pill text-bg-light">92.2%</span><br>
+                    Jabalpur Engineering College B.Tech in AI and Data Science (2022-2026) -  <span class="badge rounded-pill text-bg-light">8.2 CGPA</span>
+                </p>
+            </div>
+            <hr>
+            <div class="row">
+                <h1 class="display-5 stronger bold">Certificates</h1>
+                <p class="good-text">Introduction to Artificial Intelligence (AI) -  <a href="https://www.coursera.org/account/accomplishments/records/8KRUMNNYWG9R"><span class="badge rounded-pill text-bg-light">8KRUMNNYWG9R</span></a><br>
+                    Crash Course on Python - <a href="https://www.coursera.org/account/accomplishments/records/CS5E46XXJKD9"><span class="badge rounded-pill text-bg-light">CS5E46XXJKD9</span></a><br>
+                    Technical Support Fundamentals - <a href="https://www.coursera.org/account/accomplishments/records/K8RF3BCW9A7E"><span class="badge rounded-pill text-bg-light">K8RF3BCW9A7E</span></a><br>
+                    Supervised Machine Learning: Regression and Classification  - <a href="https://www.coursera.org/account/accomplishments/records/MH99MVAJZPNX"><span class="badge rounded-pill text-bg-light">MH99MVAJZPNX</span></a><br>
+                    Foundations of Cybersecurity - <a href="https://www.coursera.org/account/accomplishments/records/H5RX9ZTLZFGJ"><span class="badge rounded-pill text-bg-light">H5RX9ZTLZFGJ</span></a><br>
+                    Learning How to Learn: Powerful mental tools to help you master tough subjects - <a href="https://www.coursera.org/account/accomplishments/records/LGVXUULL73DD"><span class="badge rounded-pill text-bg-light">LGVXUULL73DD</span></a><br>
+                    Fundamentals of Graphic Design - <a href="https://www.coursera.org/account/accomplishments/records/FPYZY93U9GZW"><span class="badge rounded-pill text-bg-light">FPYZY93U9GZW</span></a><br>
+                    Introduction to Typography - <a href="https://www.coursera.org/account/accomplishments/records/T4MDYNLQLWMZ"><span class="badge rounded-pill text-bg-light">T4MDYNLQLWMZ</span></a>
+                </p>
+            </div>
         </div>
     </div>
 
